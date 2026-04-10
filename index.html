@@ -10,28 +10,16 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mayank Rajput — Ops & Product</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-  --bg: #111110;
-  --ink: #F0EEE9;
-  --ink-muted: #8A8780;
-  --ink-faint: #3A3936;
-  --accent: #E8673A;
-  --card-bg: #1A1918;
-  --card-border: #2A2826;
-  --memo-bg: #0C0C0B;
-  --font-display: 'Cormorant Garamond', Georgia, serif;
+      --bg: #111110;
+      --ink: #F0EEE9;
+      --ink-muted: #8A8780;
+      --ink-faint: #3A3936;
+      --accent: #E8673A;
+      --card-bg: #1A1918;
+      --card-border: #2A2826;
+      --memo-bg: #0C0C0B;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
       --font-body: 'IBM Plex Sans', sans-serif;
       --font-mono: 'IBM Plex Mono', monospace;
     }
@@ -92,10 +80,9 @@
     }
 
     .intro p {
-  font-size: 1.02rem; color: var(--ink-muted);
-  line-height: 1.8;
-  text-align: justify;
-}
+      font-size: 1.02rem; color: var(--ink-muted);
+      line-height: 1.8; text-align: justify;
+    }
 
     .intro p strong { color: var(--ink); font-weight: 500; }
 
@@ -110,12 +97,11 @@
     .memo-section {
       padding-bottom: 48px;
       opacity: 0; transform: translateY(16px);
-      animation: fadeUp 0.6s ease 0.22s forwards;
+      animation: fadeUp 0.6s ease 0.2s forwards;
     }
 
     .memo-card {
-      background: var(--memo-bg); border-radius: 8px;
-      padding: 36px 40px;
+      background: var(--memo-bg); border-radius: 8px; padding: 36px 40px;
       display: flex; justify-content: space-between;
       align-items: flex-start; gap: 32px; flex-wrap: wrap;
     }
@@ -155,9 +141,9 @@
 
     /* SUBMISSIONS */
     .work-section {
-      padding-bottom: 80px;
+      padding-bottom: 64px;
       opacity: 0; transform: translateY(16px);
-      animation: fadeUp 0.6s ease 0.32s forwards;
+      animation: fadeUp 0.6s ease 0.28s forwards;
     }
 
     .submission {
@@ -195,7 +181,6 @@
       border: 1px solid var(--card-border);
     }
 
-    /* DUAL LINKS */
     .submission-links { display: grid; grid-template-columns: 1fr 1fr; }
 
     .sub-link {
@@ -218,17 +203,47 @@
     }
 
     .sub-link:hover .sub-link-type {
-      background: rgba(200, 87, 27, 0.1); color: var(--accent);
+      background: rgba(232, 103, 58, 0.12); color: var(--accent);
     }
 
     .arr { width: 15px; height: 15px; flex-shrink: 0; }
 
+    /* INTERESTS */
+    .interests-section {
+      padding: 40px 0 48px;
+      border-top: 1px solid var(--card-border);
+      opacity: 0; transform: translateY(16px);
+      animation: fadeUp 0.6s ease 0.36s forwards;
+    }
+
+    .interests-inline {
+      display: flex; align-items: center;
+      gap: 6px; flex-wrap: wrap;
+    }
+
+    .interests-inline .label {
+      font-family: var(--font-mono); font-size: 0.68rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--ink-faint); margin-right: 8px;
+    }
+
+    .interest-item {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.8rem; color: var(--ink-muted);
+    }
+
+    .interest-item .emoji { font-size: 0.85rem; }
+
+    .sep {
+      color: var(--ink-faint); font-size: 0.7rem; margin: 0 4px;
+    }
+
     /* FOOTER */
     footer {
-      border-top: 1px solid var(--card-border); padding: 32px 0;
+      border-top: 1px solid var(--card-border); padding: 28px 0;
       display: flex; justify-content: space-between;
       align-items: center; flex-wrap: wrap; gap: 12px;
-      opacity: 0; animation: fadeUp 0.6s ease 0.45s forwards;
+      opacity: 0; animation: fadeUp 0.6s ease 0.44s forwards;
     }
 
     footer p { font-size: 0.8rem; color: var(--ink-faint); }
@@ -268,16 +283,15 @@
   </header>
 
   <!-- INTRO -->
- <section class="intro">
-  <p>
-    <strong>Category Manager at Urban Company</strong>, then <strong>Product Manager at Rizzle</strong>.  
-    I moved into product because I thought that's where the real decisions were being made. 
-    Turns out I was half right. What I actually want is to sit at the intersection of 
-    <strong>tech, business, and ops</strong> where the strategy and the execution are the same job, 
-    not two different people. That's the kind of role I'm looking for now.
-    
-  </p>
-</section>
+  <section class="intro">
+    <p>
+      <strong>Category Manager at Urban Company</strong>, then <strong>Product Manager at Rizzle</strong> —
+      I moved into product because I thought that's where the real decisions were being made.
+      Turns out I was half right. What I actually want is to sit at the intersection of
+      <strong>tech, business, and ops</strong> — where the strategy and the execution are the same job,
+      not two different people. That's the kind of role I'm looking for now.
+    </p>
+  </section>
 
   <!-- MEMO -->
   <section class="memo-section">
@@ -286,8 +300,8 @@
       <div class="memo-text">
         <h2 class="memo-title">Before the interview,<br>give me the problem.</h2>
         <p class="memo-desc">
-          Most hiring conversations start in the wrong place, in my opinion, both sides are performing, neither side learns.
-          I am taking a bet at doing it differently where you give me a real problem your business is sitting on and I'll spend 72 hours on it.
+          Most hiring conversations start in the wrong place — both sides performing, neither side learning.
+          I do it differently: give me a real problem your business is sitting on and I'll spend 72 hours on it.
           Diagnosis, tradeoffs, and a plan I'd actually execute. The best operators dig before they pitch.
         </p>
       </div>
@@ -314,8 +328,8 @@
           <p class="sub-company">Supertails</p>
           <h2 class="sub-title">Scaling Clinics Without Breaking Unit Economics or Experience</h2>
           <p class="sub-desc">
-            Supertails is expanding from 5–7 clinics to 25+ in 18–24 months. The challenge: compress breakeven 
-            from Month 8 to Month 6, maintain a >4.8 Google rating, hit 80%+ capacity utilization by Month 4, 
+            Supertails is expanding from 5–7 clinics to 25+ in 18–24 months. The challenge: compress breakeven
+            from Month 8 to Month 6, maintain a >4.8 Google rating, hit 80%+ capacity utilization by Month 4,
             and build a data-driven operating layer without letting standardization kill clinical judgment.
           </p>
           <div class="sub-tags">
@@ -343,8 +357,8 @@
           <p class="sub-company">FirstClub</p>
           <h2 class="sub-title">Supply Architecture & 24-Week Expansion to 35 Clubhouses</h2>
           <p class="sub-desc">
-            FirstClub is quality commerce not a crowded marketplace. The ask: design a scalable operating model 
-            to expand from 10 to 35 clubhouses without compromising product quality, customer experience, or unit 
+            FirstClub is quality commerce — not a crowded marketplace. The ask: design a scalable operating model
+            to expand from 10 to 35 clubhouses without compromising product quality, customer experience, or unit
             economics. Supply architecture, QC systems, ERP stack, and a phased Gantt-chart execution plan.
           </p>
           <div class="sub-tags">
@@ -372,9 +386,9 @@
           <p class="sub-company">abcoffee</p>
           <h2 class="sub-title">Building Gifting & Festive Occasions into a Revenue Engine</h2>
           <p class="sub-desc">
-            abcoffee shouldn't approach gifting as seasonal it should be a high-frequency behavioral layer 
-            built on micro-moments. My submission reframes the strategy: own everyday triggers like 
-            "3PM Don't Crash Yet" instead of chasing Diwali hampers. Includes a new category bet CALMCaff inspired by the ProCaff launch
+            abcoffee shouldn't approach gifting as seasonal — it should be a high-frequency behavioral layer
+            built on micro-moments. My submission reframes the strategy: own everyday triggers like
+            "3PM Don't Crash Yet" instead of chasing Diwali hampers. Includes a new category bet — CALMCaff, inspired by the ProCaff launch.
           </p>
           <div class="sub-tags">
             <span class="tag">Consumer</span>
@@ -401,10 +415,10 @@
           <p class="sub-company">Mesa School of Business</p>
           <h2 class="sub-title">Designing a Career Outcomes Engine for Startup Hiring</h2>
           <p class="sub-desc">
-            Mesa students come from vastly different starting points, non-profits, Big 4, armed forces, 
-            fresh graduates. One-size-fits-all placement drives don't work. My submission builds a 
-            programmable, persona-specific system to convert candidate credibility into recruiter visibility 
-            into shortlists and not luck, engineered.
+            Mesa students come from vastly different starting points — non-profits, Big 4, armed forces,
+            fresh graduates. One-size-fits-all placement drives don't work. My submission builds a
+            programmable, persona-specific system to convert candidate credibility into recruiter visibility
+            into shortlists — not luck, engineered.
           </p>
           <div class="sub-tags">
             <span class="tag">EdTech</span>
@@ -425,6 +439,18 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- INTERESTS -->
+  <section class="interests-section">
+    <p class="section-label">When not working</p>
+    <div class="interests-inline">
+      <span class="interest-item"><span class="emoji">☕</span> can help you find great beans and brew a solid pour-over</span>
+      <span class="sep">·</span>
+      <span class="interest-item"><span class="emoji">⚽</span> Liverpool fan, through and through — YNWA</span>
+      <span class="sep">·</span>
+      <span class="interest-item"><span class="emoji">📖</span> mildly understanding the history of philosophy</span>
     </div>
   </section>
 
